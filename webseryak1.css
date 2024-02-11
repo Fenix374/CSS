@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+}
+
+.background-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: auto;
+    background: url('spotifi.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+.logo {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.app-screenshot {
+    width: 50%;
+    position: relative; 
+    z-index: 1; 
+    text-align: right;
+    padding: 20px;
+}
+
+
+.app-screenshot img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: gray;
+    padding: 20px;
+}
+
+.creator-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.creator-details {
+    align-self: flex-start;
+}
+
+.creator-details p {
+    margin: 3px 0;
+}
+
+.social-links {
+    text-align: right;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: blue;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.artist-list {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.artist-list h2 {
+    margin-bottom: 10px;
+}
+
+.artist-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.artist-column p {
+    width: 25%;
+    margin: 5px 0;
+}
