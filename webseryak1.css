@@ -5,13 +5,14 @@ body {
 }
 
 header {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    flex-wrap: wrap;
 }
 
 .background-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 70%;
     height: auto;
     background: url('spotifi.jpg') no-repeat center center;
@@ -20,10 +21,10 @@ header {
 }
 
 .logo {
-    position: relative;
     z-index: 2; 
     text-align: center;
     padding: 20px;
+    flex-basis: 100%;
 }
 
 .logo img {
@@ -33,12 +34,10 @@ header {
 
 .app-screenshot {
     width: 50%;
-    position: relative; 
-    z-index: 1; 
     text-align: right;
     padding: 20px;
+    flex-basis: 100%; 
 }
-
 
 .app-screenshot img {
     max-width: 100%;
@@ -89,9 +88,10 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    width: 100%;
 }
 
 .artist-column p {
-    width: 25%;
+    flex-basis: 25%;
     margin: 5px 0;
 }
