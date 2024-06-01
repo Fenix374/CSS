@@ -5,25 +5,26 @@ body {
 }
 
 header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     position: relative;
 }
 
 .background-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 70%;
-    height: auto;
+    grid-column: 1 / -1; /* Расширяется на весь header */
+    width: 100%;
+    height: 200px; /* Устанавливаем фиксированную высоту для header */
     background: url('spotifi.jpg') no-repeat center center;
     background-size: cover;
     opacity: 0.1;
 }
 
 .logo {
-    position: relative;
-    z-index: 2; 
     text-align: center;
     padding: 20px;
+    z-index: 1; /* Поднимаем на передний план */
+    align-self: center;
 }
 
 .logo img {
@@ -32,41 +33,27 @@ header {
 }
 
 .app-screenshot {
-    width: 50%;
-    position: relative; 
-    z-index: 1; 
     text-align: right;
     padding: 20px;
-}
-
-
-.app-screenshot img {
-    max-width: 100%;
-    height: auto;
+    justify-self: end;
+    z-index: 1; /* Поднимаем на передний план */
 }
 
 footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: gray;
     padding: 20px;
 }
 
 .creator-info {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.creator-details {
-    align-self: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .creator-details p {
     margin: 3px 0;
-}
-
-.social-links {
-    text-align: right;
 }
 
 .social-links a {
@@ -79,6 +66,7 @@ footer {
 .artist-list {
     text-align: left;
     margin-top: 30px;
+    grid-column: 1 / -1;
 }
 
 .artist-list h2 {
@@ -86,12 +74,7 @@ footer {
 }
 
 .artist-column {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.artist-column p {
-    width: 25%;
-    margin: 5px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
